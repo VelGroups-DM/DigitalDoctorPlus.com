@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/koppi/OneDrive/Desktop/Dup5.html#hero -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Digital Plus</title>
+        <link rel="stylesheet" href="./Doctor Digital Plus_files/css2">
+    <link rel="stylesheet" href="./Doctor Digital Plus_files/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        header {
+            background-color: #000;
+            color: #e0e0e0;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: #333;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        header.scrolled h1 {
+            transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+       .hero {
+    background: url('C:/Users/koppi/OneDrive/Documents/DDPwebsite/images/Canva 11-08-2024 18_17_423.png') no-repeat center center fixed;
+    background-size: 40% auto;
+    height: 99.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0 20px;
+    
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero h2, .hero p {
+    position: relative;
+    display: inline-block;
+}
+
+        .hero h2 {
+            font-size: 2rem;
+            z-index: 1;
+            margin: 0;
+            animation: fadeInUp 1.5s ease-in-out;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1rem;
+            z-index: 1;
+            margin-top: 20px;
+            animation: fadeInUp 2s ease-in-out;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2::before, .hero h2::after,
+        .hero p::before, .hero p::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: gold;
+            box-shadow: 0 0 5px gold, 0 0 10px gold;
+        }
+
+        .hero h2::before {
+            top: -10px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            animation: shootingStar 3s infinite;
+        }
+
+        .hero h2::after {
+            bottom: -20px;
+            right: -20px;
+            width: 10px;
+            height: 5px;
+            animation: shootingStar 3s infinite;
+            animation-delay: 1s;
+        }
+
+        .hero p::before {
+            top: -15px;
+            left: 20px;
+            width: 8px;
+            height: 8px;
+            animation: shootingStar 4s infinite;
+        }
+
+        .hero p::after {
+            bottom: -15px;
+            right: 20px;
+            width: 8px;
+            height: 8px;
+            animation: shootingStar 4s infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-20px) scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #2b2b2b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section::before, .section::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 123, 255, 0.2) 100%);
+            transform: skewY(-12deg);
+            top: -90%;
+            left: 0;
+            z-index: 0;
+        }
+
+        .section-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-content div {
+            flex: 1;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: #3c3c3c;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .section-content div:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-content div img {
+            width: 100%; /* Ensure images are responsive */
+            height: 200px; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+	    align-items: center;
+        }
+
+        .section-content div:hover img {
+            transform: scale(1.05);
+        }
+
+        .section-content div h3 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            color: #e0e0e0;
+        }
+
+        .section-content div p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: #000;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: #e0e0e0;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #007bff;
+        }
+	.scroll-to-hero {
+            cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1> Digital Doctor Plus</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Your Digital Healthcare Partner</h2>
+        <p>Transforming medical practices with digital solutions</p>
+    </div>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="section-content">
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\SocialMediaManagement.jpeg">
+                <h3>Social Media Management</h3>
+                <p>We handle your social media presence, ensuring professional and consistent communication.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\ContentCreation.jpg" alt="Service 2">
+                <h3>Content Creation</h3>
+                <p>Create engaging and informative content tailored specifically for the healthcare industry.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\VideoCreation.jpg" alt="Service 3">
+                <h3>Video Production</h3>
+                <p>High-quality video production services to highlight your practice and expertise.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\channels4_profile.jpg" alt="YouTube Maintenance">
+                <h3>YouTube Maintenance</h3>
+                <p>Maintain a professional YouTube presence with our comprehensive management services.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\Instagramimages.png" alt="Instagram Maintenance">
+                <h3>Instagram Maintenance</h3>
+                <p>Boost your Instagram profile with regular updates and targeted strategies.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\SurgeryPic.jpg" alt="Surgery Shoots">
+                <h3>Surgery Shoots</h3>
+                <p>Our professional videography services capture high-quality footage of your surgical procedures.</p>
+            </div>
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\feedback.jpg" alt="Patient Reviews">
+                <h3>Patient Reviews</h3>
+                <p>Collect and showcase positive patient reviews to build trust and credibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="section-content">
+            <div>
+                <img src="C:\Users\koppi\OneDrive\Documents\DDPwebsite\images\About-us.jpg" alt="About Us">
+                <h3>Who We Are</h3>
+                <p>In today’s digital world, maintaining a strong online presence is crucial for healthcare professionals. Our company offers specialized digital marketing services designed to help doctors enhance their visibility, connect with patients, and grow their practices. We provide tailored Instagram and YouTube management, content creation, and video production services that align with your professional goals and patient needs.</p>
+
+<h3>Why Choose Us</h3>
+
+<p>Specialized Expertise: We understand the nuances of healthcare communication and tailor our services to meet the specific needs of medical professionals.
+Customized Solutions: Our strategies are designed to reflect your unique brand and practice.</p>
+
+<h3>Patient-Centric Approach</h3>
+<p>We focus on creating content that resonates with your patients and enhances their understanding of your services.</p>
+<p>Results-Driven: We employ data-driven techniques to track and optimize performance for tangible results.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <div class="section-content">
+            <div>
+                <img src="portfolio1.jpg" alt="Portfolio 1">
+                <h3>Project 1</h3>
+                <p>A successful campaign for a renowned clinic.</p>
+            </div>
+            <div>
+                <img src="portfolio2.jpg" alt="Portfolio 2">
+                <h3>Project 2</h3>
+                <p>High-quality video series for a medical practitioner.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=digitaldoctorplus@gmail.com&su=Inquiry&body=Hello%20there" target="_blank">digitaldoctorplus@gmail.com</a>
+ </p>
+
+        <p>Phone: <a href="tel:+918748818156">+91 8748818156</a></p>
+        <p>Connect with us:</p>
+        <a href="https://www.instagram.com/digital_doctor_plus?igsh=MTNscGM4eWltbjBpNw==">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; height:24px;">
+        </a>
+        <a href="https://youtube.com/@digitaldoctorplus?si=G75nk7GmDRYgd56x" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="width:24px; height:24px;">
+        </a>
+        <a href="https://wa.me/+918748818156" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:24px; height:24px;">
+        </a>
+    </footer>
+
+</body>
+</html>
